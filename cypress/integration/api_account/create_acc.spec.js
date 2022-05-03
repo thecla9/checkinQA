@@ -58,7 +58,7 @@ describe('ACCOUNT: Create Account (POST)', () => {
   });
 
 
-    it.only('Test Acc. Creation using invalid Phone Number', () => {
+    it.only('Test Account Creation using invalid Phone Number', () => {
         cy.request({
                 method: 'POST',
                 failOnStatusCode: false,
