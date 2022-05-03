@@ -57,4 +57,28 @@ describe('ACCOUNT: Create Account (POST)', () => {
         })
   });
 
+
+    it.only('Test Acc. Creation using invalid Phone Number', () => {
+        cy.request({
+                method: 'POST',
+                failOnStatusCode: false,
+                url: user.crturl_01,
+  
+            body: {
+                "email": "jane#gmail.com",
+                "password":"Web@12345",
+                "firstName" : "Jane",
+                    "lastName" : "Doe",
+                    "phoneNumber" : {
+                        "code" : "+234",
+                        "number" : varText.phoneNumb+'qwe'
+                    },
+                    "accountAccessMedium": "Web"
+            }
+        }).then((res)=>{
+              expect(res.status).to.eq(401)
+              expect(res.body.error).to.eq('Unauthorized')
+        })
+  });
+
 })
