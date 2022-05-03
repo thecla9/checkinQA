@@ -1,0 +1,19 @@
+{
+    "reporter": "cypress-mochawesome-reporter",
+    "screenshotOnRunFailure": true,
+    "reporterOptions": {
+        "reportDir": "cypress/report",
+        "overwrite": true,
+        "charts": true,
+        "embeddedScreenshots": true
+      },
+
+    "baseUrl": "https://checkin-dev.herokuapp.com/",
+
+    "env": {
+          "token": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50U3RhdHVzIjoiVmVyaWZpZWQiLCJhY2NvdW50QWNjZXNzIjoiR3Vlc3QiLCJhY2NvdW50VHlwZSI6IkFjY291bnQiLCJndWVzdFZlcmlmaWNhdGlvbkNvbXBsZXRlIjpmYWxzZSwiaG9zdFZlcmlmaWNhdGlvbkNvbXBsZXRlIjpmYWxzZSwiaWQiOiI2MjZiZWI2YWU0MjE3NTI5Y2EwNTI4NmYiLCJpYXQiOjE2NTEzNjA3NTksImV4cCI6MTY1MTYxOTk1OX0.8UVUaFoNqfGHI57X210I_AWoFI8Uz8IDmNJk7Fs96pg"
+        }
+
+}
+
+

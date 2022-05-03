@@ -1,0 +1,24 @@
+{
+  "name": "ctc_api_aut",
+  "version": "1.0.0",
+  "description": "Checkin API Automation Testing",
+  "main": "index.js",
+  "scripts": {
+    "cy:open": "cypress open",
+    "cy:run": "cypress run"
+  },
+  "keywords": [
+    "REST",
+    "API",
+    "Automation"
+  ],
+  "author": "Samuel Okolo",
+  "license": "ISC",
+  "dependencies": {
+    "cypress": "^9.6.0",
+    "prettier": "^2.6.2"
+  },
+  "devDependencies": {
+    "cypress-mochawesome-reporter": "^3.0.1"
+  }
+}
