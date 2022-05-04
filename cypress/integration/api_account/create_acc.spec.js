@@ -10,7 +10,7 @@ const user = {
 // ACCOUNT: Create Account with Valid Credentails
 describe('ACCOUNT: Create Account (POST)', () => {
 
-    it.only('Create Account with Valid Credentails', () => {
+    it('Create Account with Valid Credentails', () => {
         cy.request({
               method: 'POST',
             url: user.crturl_01,
@@ -27,13 +27,13 @@ describe('ACCOUNT: Create Account (POST)', () => {
                     "accountAccessMedium": "Web"
             }
         }).then((res)=>{
-            // cy.log(varText.testEmail)
+            cy.log(varText.testEmail)
               expect(res.status).to.eq(201)
         })
   });
 
 
-    it.only('Create Account with invalid Credentails', () => {
+    it('Create Account with invalid Credentails', () => {
         cy.request({
                 method: 'POST',
                 failOnStatusCode: false,
@@ -58,7 +58,7 @@ describe('ACCOUNT: Create Account (POST)', () => {
   });
 
 
-    it.only('Test Account Creation using invalid Phone Number', () => {
+    it('Test Account Creation using invalid Phone Number', () => {
         cy.request({
                 method: 'POST',
                 failOnStatusCode: false,
