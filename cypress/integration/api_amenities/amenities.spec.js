@@ -16,7 +16,7 @@ const user = {
 // AMENITIES: Create (POST)
 describe('AMENITIES: Create Amenities (POST)', () => {
 // Valid Credentials
-    it('Test the creation of Amenities with valid credentials', () => {
+    it.only('Test the creation of Amenities with valid credentials', function () {
       
       cy.request({
           method: 'POST',
@@ -32,7 +32,6 @@ describe('AMENITIES: Create Amenities (POST)', () => {
             "createdByAccountType":"CheckInStaff"
           }
       }).then((res)=>{
-            // cy.log(varText.test)
             expect(res.status).to.eq(201)
       })
   
