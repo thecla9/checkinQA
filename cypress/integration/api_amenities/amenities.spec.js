@@ -16,7 +16,7 @@ const user = {
 // AMENITIES: Create (POST)
 describe('AMENITIES: Create Amenities (POST)', () => {
 // Valid Credentials
-    it.only('Test the creation of Amenities with valid credentials', function () {
+    it('Test the creation of Amenities with valid credentials', function () {
       
       cy.request({
           method: 'POST',
