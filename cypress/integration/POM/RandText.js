@@ -14,7 +14,7 @@ class RandText {
     test3 = randText + 'gwkivx' + 'qafrm';
     test4 = randText;
     testEmail = randText + '@gmail.com';
-    phoneNumb = '80' + randNumb;
+    phoneNumb = '60' + randNumb;
 }
 
 export default RandText
