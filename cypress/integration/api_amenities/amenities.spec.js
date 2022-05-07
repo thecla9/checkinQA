@@ -16,7 +16,7 @@ const user = {
 // AMENITIES: Create (POST)
 describe('AMENITIES: Create Amenities (POST)', () => {
 // Valid Credentials
-    it.only('Test the creation of Amenities with valid credentials', function () {
+    it('Test the creation of Amenities with valid credentials', function () {
       
       cy.request({
           method: 'POST',
@@ -45,7 +45,7 @@ describe('AMENITIES: Create Amenities (POST)', () => {
           url: user.anemurl_01,
 
           headers: {
-                "authorization": (Cypress.env('token')) + 'Qsgh'
+                "authorization": (Cypress.env('token')+'Ghwk')
           },
           body: {
             "name": varText.test,
