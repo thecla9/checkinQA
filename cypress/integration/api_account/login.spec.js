@@ -19,7 +19,6 @@ it('Login', () => {
             "deviceId" : "null"
           }
       }).then((res)=>{
-            // cy.log(res.body.token)
             expect(res.status).to.eq(201)
       })
 });
