@@ -5,11 +5,11 @@
 //const varText = new RandText();
 const user = { 
     aparturl_01:   ("/apartment-listing/create"),
-    aparturl_02:   ("/apartment-listing/update"),
+    //aparturl_02:   ("/apartment-listing/update"),
     aparturl_03:   ("/apartment-listing/?=Thecla"),
-    aparturl_04:   ("/apartment-listing/"),
-    aparturl_05:   ("/apartment-listing/upload-apartment-picture"),
-    aparturl_06:   ("/apartment-listing/upload-apartment-video"),
+    aparturl_04:   ("/apartment-listing/")
+   // aparturl_05:   ("/apartment-listing/upload-apartment-picture"),
+   // aparturl_06:   ("/apartment-listing/upload-apartment-video"),
 };
 
 
@@ -153,139 +153,139 @@ describe('APARTMENT: Create Apartment (POST)', () => {
 
     })
 
-// APARTMENT: Update Apartment (PUT)
-describe('APARTMENT: Update Apartment (PUT)', () => {
+// // APARTMENT: Update Apartment (PUT)
+// describe('APARTMENT: Update Apartment (PUT)', () => {
 
-    // Valid Signature
-        it('Test the update of Apartment with valid credentials', () => {
-          cy.request({
-              method: 'PUT',
-              url: user.aparturl_02,
+//     // Valid Signature
+//         it('Test the update of Apartment with valid credentials', () => {
+//           cy.request({
+//               method: 'PUT',
+//               url: user.aparturl_02,
     
-              headers: {
-                    "authorization": (Cypress.env('token'))
-              },
-              body: {
-                "address" : {
-                     "country" : "Nigeria",
-                     "city" : "Lagos",
-                     "state": "Lagos",
-                     "coordinates" : {
-                         "coordinates" : [12,12]
-                     }
-                 },
-               "fees" : {
-                     "extraGuestFee" : 1000,
-                     "petFee" : 500,
-                     "cleaningFee": 1000,
-                     "securityDepositFee": 500,
-                     "discountOffered": 300
+//               headers: {
+//                     "authorization": (Cypress.env('token'))
+//               },
+//               body: {
+//                 "address" : {
+//                      "country" : "Nigeria",
+//                      "city" : "Lagos",
+//                      "state": "Lagos",
+//                      "coordinates" : {
+//                          "coordinates" : [12,12]
+//                      }
+//                  },
+//                "fees" : {
+//                      "extraGuestFee" : 1000,
+//                      "petFee" : 500,
+//                      "cleaningFee": 1000,
+//                      "securityDepositFee": 500,
+//                      "discountOffered": 300
                      
-                 },
-               "propertyTypeOption": "UniqueSpaceOption",
-               "propertyType": "Camper",
-               "whatGuestsBook": "EntirePlace",
-               "forGuestsOnly": "Yes",
-               "bedrooms": 2,
-               "numberOfBeds": 2,
-               "bedTypes": "KingSize",
-               "baths": 3,
-               "numberOfAdults": 2,
-               "numberOfInfants": 1,
-               "numberOfChildren": 2,
-               "title": "Luxirous Apartment",
-               "basePrice": 20000,
-               "description": "string",
-               "photos": ["61d8cdd15de219d8f8c4c5a0"],
-               "videos": ["61d8cdd15de219d8f8c4c5a0"],
-               "allowedOptions":{
-                   "petsAllowed" : true,
-                   "smokingAllowed" : false,
-                   "eventsPartiesAllowed": true
-               },
-               "additionalHouseRules": "[]",
-               "bookingAvailability": "BookingAvailabilityEnum",
-               "whatMoreShouldGuestsKnow": "The apartment has an open pitch for excercise",
-               "arriveBefore": "2:00am",
-               "arriveAfter": "2:00am",
-               "leaveBefore": "12:00pm",
-               "minimumStayInNight": 2,
-               "maximumStayInNight": 2,
-               "amenities": ["61df189eddb5f9eee7322864"]
-             }
-          }).then((res)=>{
-                expect(res.status).to.eq(200)
-          })
+//                  },
+//                "propertyTypeOption": "UniqueSpaceOption",
+//                "propertyType": "Camper",
+//                "whatGuestsBook": "EntirePlace",
+//                "forGuestsOnly": "Yes",
+//                "bedrooms": 2,
+//                "numberOfBeds": 2,
+//                "bedTypes": "KingSize",
+//                "baths": 3,
+//                "numberOfAdults": 2,
+//                "numberOfInfants": 1,
+//                "numberOfChildren": 2,
+//                "title": "Luxirous Apartment",
+//                "basePrice": 20000,
+//                "description": "string",
+//                "photos": ["61d8cdd15de219d8f8c4c5a0"],
+//                "videos": ["61d8cdd15de219d8f8c4c5a0"],
+//                "allowedOptions":{
+//                    "petsAllowed" : true,
+//                    "smokingAllowed" : false,
+//                    "eventsPartiesAllowed": true
+//                },
+//                "additionalHouseRules": "[]",
+//                "bookingAvailability": "BookingAvailabilityEnum",
+//                "whatMoreShouldGuestsKnow": "The apartment has an open pitch for excercise",
+//                "arriveBefore": "2:00am",
+//                "arriveAfter": "2:00am",
+//                "leaveBefore": "12:00pm",
+//                "minimumStayInNight": 2,
+//                "maximumStayInNight": 2,
+//                "amenities": ["61df189eddb5f9eee7322864"]
+//              }
+//           }).then((res)=>{
+//                 expect(res.status).to.eq(200)
+//           })
       
-          })
+//           })
     
-    // Invalid Signature
-        it('Test the update of Apartment with invalid credentials', () => {
-          cy.request({
-              method: 'PUT',
-              failOnStatusCode: false,
-              url: user.aparturl_02,
+//     // Invalid Signature
+//         it('Test the update of Apartment with invalid credentials', () => {
+//           cy.request({
+//               method: 'PUT',
+//               failOnStatusCode: false,
+//               url: user.aparturl_02,
     
-              headers: {
-                    "authorization": (Cypress.env('token')) + 'Qgh2'
-              },
-              body:{
-                "address" : {
-                     "country" : "Nigeria",
-                     "city" : "Lagos",
-                     "state": "Lagos",
-                     "coordinates" : {
-                         "coordinates" : [12,12]
-                     }
-                 },
-               "fees" : {
-                     "extraGuestFee" : 1000,
-                     "petFee" : 500,
-                     "cleaningFee": 1000,
-                     "securityDepositFee": 500,
-                     "discountOffered": 300
+//               headers: {
+//                     "authorization": (Cypress.env('token')) + 'Qgh2'
+//               },
+//               body:{
+//                 "address" : {
+//                      "country" : "Nigeria",
+//                      "city" : "Lagos",
+//                      "state": "Lagos",
+//                      "coordinates" : {
+//                          "coordinates" : [12,12]
+//                      }
+//                  },
+//                "fees" : {
+//                      "extraGuestFee" : 1000,
+//                      "petFee" : 500,
+//                      "cleaningFee": 1000,
+//                      "securityDepositFee": 500,
+//                      "discountOffered": 300
                      
-                 },
-               "propertyTypeOption": "UniqueSpaceOption",
-               "propertyType": "Camper",
-               "whatGuestsBook": "EntirePlace",
-               "forGuestsOnly": "Yes",
-               "bedrooms": 2,
-               "numberOfBeds": 2,
-               "bedTypes": "KingSize",
-               "baths": 3,
-               "numberOfAdults": 2,
-               "numberOfInfants": 1,
-               "numberOfChildren": 2,
-               "title": "Luxirous Apartment",
-               "basePrice": 20000,
-               "description": "string",
-               "photos": ["61d8cdd15de219d8f8c4c5a0"],
-               "videos": ["61d8cdd15de219d8f8c4c5a0"],
-               "allowedOptions":{
-                   "petsAllowed" : true,
-                   "smokingAllowed" : false,
-                   "eventsPartiesAllowed": true
-               },
-               "additionalHouseRules": "[]",
-               "bookingAvailability": "BookingAvailabilityEnum",
-               "whatMoreShouldGuestsKnow": "The apartment has an open pitch for excercise",
-               "arriveBefore": "2:00am",
-               "arriveAfter": "2:00am",
-               "leaveBefore": "12:00pm",
-               "minimumStayInNight": 2,
-               "maximumStayInNight": 2,
-               "amenities": ["61df189eddb5f9eee7322864"]
-             }
-          }).then((res)=>{
-                expect(res.status).to.eq(400)
-                expect(res.body.error).to.eq('Bad Request')
-                expect(res.body.message).to.eq('invalid signature')
-          })
+//                  },
+//                "propertyTypeOption": "UniqueSpaceOption",
+//                "propertyType": "Camper",
+//                "whatGuestsBook": "EntirePlace",
+//                "forGuestsOnly": "Yes",
+//                "bedrooms": 2,
+//                "numberOfBeds": 2,
+//                "bedTypes": "KingSize",
+//                "baths": 3,
+//                "numberOfAdults": 2,
+//                "numberOfInfants": 1,
+//                "numberOfChildren": 2,
+//                "title": "Luxirous Apartment",
+//                "basePrice": 20000,
+//                "description": "string",
+//                "photos": ["61d8cdd15de219d8f8c4c5a0"],
+//                "videos": ["61d8cdd15de219d8f8c4c5a0"],
+//                "allowedOptions":{
+//                    "petsAllowed" : true,
+//                    "smokingAllowed" : false,
+//                    "eventsPartiesAllowed": true
+//                },
+//                "additionalHouseRules": "[]",
+//                "bookingAvailability": "BookingAvailabilityEnum",
+//                "whatMoreShouldGuestsKnow": "The apartment has an open pitch for excercise",
+//                "arriveBefore": "2:00am",
+//                "arriveAfter": "2:00am",
+//                "leaveBefore": "12:00pm",
+//                "minimumStayInNight": 2,
+//                "maximumStayInNight": 2,
+//                "amenities": ["61df189eddb5f9eee7322864"]
+//              }
+//           }).then((res)=>{
+//                 expect(res.status).to.eq(400)
+//                 expect(res.body.error).to.eq('Bad Request')
+//                 expect(res.body.message).to.eq('invalid signature')
+//           })
       
-          })
+//           })
     
-    })
+//     })
 
 // APARTMENT: Get All APARTMENT BY HOST (GET)
 describe('APARTMENT: Get All APARTMENT by Host (GET)', () => {
@@ -327,40 +327,40 @@ describe('APARTMENT: Get Apartment by ID (GET)', () => {
 })
 
 
-// APARTMENT: Upload picture of an apartment (POST)
-describe('APARTMENT: Upload the picture of an apartment (POST)', () => {
+// // APARTMENT: Upload picture of an apartment (POST)
+// describe('APARTMENT: Upload the picture of an apartment (POST)', () => {
 
-    it('Upload the picture of an apartment with valid credentials', () => {
-      cy.request({
-          method: 'POST',
-          url: user.aparturl_05,
+//     it('Upload the picture of an apartment with valid credentials', () => {
+//       cy.request({
+//           method: 'POST',
+//           url: user.aparturl_05,
 
-          headers: {
-                "authorization": (Cypress.env('token'))
-          }
-      }).then((res)=>{
-            expect(res.status).to.eq(200)
-      })
+//           headers: {
+//                 "authorization": (Cypress.env('token'))
+//           }
+//       }).then((res)=>{
+//             expect(res.status).to.eq(200)
+//       })
   
-      })
+//       })
 
-})
+// })
 
-// APARTMENT: Upload video of an apartment (POST)
-describe('APARTMENT: Upload a video of an Apartment (POST)', () => {
+// // APARTMENT: Upload video of an apartment (POST)
+// describe('APARTMENT: Upload a video of an Apartment (POST)', () => {
 
-    it('Upload the video of an apartment with valid credentials', () => {
-      cy.request({
-          method: 'POST',
-          url: user.aparturl_06,
+//     it('Upload the video of an apartment with valid credentials', () => {
+//       cy.request({
+//           method: 'POST',
+//           url: user.aparturl_06,
 
-          headers: {
-                "authorization": (Cypress.env('token'))
-          }
-      }).then((res)=>{
-            expect(res.status).to.eq(200)
-      })
+//           headers: {
+//                 "authorization": (Cypress.env('token'))
+//           }
+//       }).then((res)=>{
+//             expect(res.status).to.eq(200)
+//       })
   
-      })
+//       })
 
-})
+// })
