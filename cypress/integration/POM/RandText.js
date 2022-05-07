@@ -14,8 +14,6 @@ let mailKey = 'abcdefghijklmnopqrstuvwxyz'
     randNum+= (Math.floor(Math.random() * 100));
     randNumbe+= (Math.floor(Math.random() * 1000));
 
-
-
 class RandText {
     test = randText + ' ' + randText;
     test2 = randText + randText;
@@ -26,7 +24,6 @@ class RandText {
     cardNumb = '55' + randNumber;
     cvcNumb = '1' + randNum; 
     codeNumb = '900'+ randNumbe;
-  
 }
 
 export default RandText
