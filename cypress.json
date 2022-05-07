@@ -11,7 +11,7 @@
     "baseUrl": "https://dev.checkinapp.xyz/",
 
     "env": {
-          "token": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50U3RhdHVzIjoiVmVyaWZpZWQiLCJhY2NvdW50QWNjZXNzIjoiR3Vlc3QiLCJhY2NvdW50VHlwZSI6IkFjY291bnQiLCJndWVzdFZlcmlmaWNhdGlvbkNvbXBsZXRlIjpmYWxzZSwiaG9zdFZlcmlmaWNhdGlvbkNvbXBsZXRlIjpmYWxzZSwiaWQiOiI2MjZiZWI2YWU0MjE3NTI5Y2EwNTI4NmYiLCJpYXQiOjE2NTE2NjYwMDMsImV4cCI6MTY1MTkyNTIwM30.OdGYkvau1JcvMUmZK-nomqISTEWi-7k2izQLOcs5hcg"
+          "token": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50U3RhdHVzIjoiVmVyaWZpZWQiLCJhY2NvdW50QWNjZXNzIjoiR3Vlc3QiLCJhY2NvdW50VHlwZSI6IkFjY291bnQiLCJndWVzdFZlcmlmaWNhdGlvbkNvbXBsZXRlIjpmYWxzZSwiaG9zdFZlcmlmaWNhdGlvbkNvbXBsZXRlIjpmYWxzZSwiaWQiOiI2MjZiZWI2YWU0MjE3NTI5Y2EwNTI4NmYiLCJpYXQiOjE2NTE5MzM3NjUsImV4cCI6MTY1MjE5Mjk2NX0.yF5WZ9tY8lzAhOLE5O4uPQ4EqayGsIrsgHWmDw_QSMM"
         }
 
 }
