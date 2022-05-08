@@ -5,6 +5,8 @@ let randNumb = ''
 let randNumb1 = ''
 let randNumb2 = ''
 let randNumb3 = ''
+let randNumb4 = ''
+let randNumb5 = '' 
 
 let mailKey = 'abcdefghijklmnopqrstuvwxyz'
     for (let i = 0; i < 10; i++)
@@ -13,6 +15,8 @@ let mailKey = 'abcdefghijklmnopqrstuvwxyz'
     randNumb1+= (Math.floor(Math.random() * 100000000000000));
     randNumb2+= (Math.floor(Math.random() * 100));
     randNumb3+= (Math.floor(Math.random() * 1000));
+    randNumb4+= (Math.floor(Math.random() * 10));
+    randNumb5+= (Math.floor(Math.random() * 10));
 
 class RandText {
     test = randText + ' ' + randText;
@@ -24,6 +28,8 @@ class RandText {
     cardNumb = '55' + randNumb1;
     cvcNumb = '1' + randNumb2; 
     codeNumb = '900'+ randNumb3;
+    feeNumb = '0.0'+ randNumb5;
+    yearNumb ='200' + randNumb4
 }
 
 export default RandText

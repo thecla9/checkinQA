@@ -19,11 +19,11 @@ describe('CONFIG: Create CarListing Config (POST)', () => {
 //           },
 //             body:             {
 //                     "carListingConfig":{
-//                             "minimumCarYearAllowed": varText.cvcNumb   
+//                             "minimumCarYearAllowed": varText.yearNumb   
 //                     },
 //                     "bookingConfig":{
-//                          "checkInFeeFromGuest": varText.cvcNumb,
-//                          "checkInFeeFromHost": varText.cvcNumb
+//                          "checkInFeeFromGuest": varText.feeNumb,
+//                          "checkInFeeFromHost": varText.feeNumb
 //                     }
 //             }
 //         }).then((res)=>{
